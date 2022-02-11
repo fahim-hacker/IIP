@@ -1,86 +1,94 @@
-html{
-    height: 100%;
-    width: 100%;
+*{
+padding: 0;
+margin: 0;
+display: inline-block;
 }
+
 body{
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
-    box-sizing: border-box;
+    height: 100vh;
+    width: 100vw;
     background: black;
-    color: white;
     overflow: hidden;
 }
-article{
-    height: 100%;
-    width: 100%;
+
+head{
+    display: none;
 }
-.middle{
-    height: 100%;
-    width: 100%;
+script{
+    display: none;
 }
-p a{
-    text-decoration: none;
-    color: white;
+title{
+    display: none;
 }
 
-@media only screen and (min-width:290px){
-     body{
-        background-image: url(Images/1\ \(2\).png);
-        background-size: 100% 100%;
-     }
-    .middle p{
-        font-size: 100px;
+@keyframes neon {
+    0%{
+        box-shadow:rgb(0, 255, 255) 0 0 30px, cyan 0 0 60px, cyan 0 0 70px;
+    }
+    50%{
+    box-shadow: cyan 0 0 10px,
+    cyan 0 0 20px,
+    cyan 0 0 50px;
+    }
+    100%{
+        box-shadow:cyan 0 0 30px, cyan 0 0 60px, cyan 0 0 70px;
+    }
+
+}
+@media only screen and (min-width:720px) 
+{            
+
+    .button{
+                height: 172px;
+                width: 289px;
+                background: black;
+                border-radius: 20px;
+                box-shadow: cyan 0 0 30px, cyan 0 0 60px, cyan 0 0 70px;
+                animation: neon 5s infinite;
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+           
+    .button a{
+                height: 100%;
+                width: 100%;
+            }
+    .button p{
+                text-align: center;
+                height: 100%;
+                width: 100%;
+                color: rgb(40, 74, 230);
+                text-shadow: rgb(107 40 230) 0 0 20px;
+                font-size: 153px;
+            }     
+}
+
+@media only screen and (min-width:1600px) {
+    .button{
+        height: 80px;
+        width: 120px;
         position: absolute;
-        top: 30%;
+        top: 50%;
         left: 50%;
-        transform: translate(-50%,-50%);
-        text-align: center;
-        font-style: italic;
-        background: white;
-        width: 220px;
-        color:black;
-    
+        transform: translate(-50%, -50%);
+        background: black;
+        border-radius: 20px;
+         box-shadow: cyan 0 0 10px,
+         cyan 0 0 20px,
+         cyan 0 0 50px;
+         animation: neon 5s infinite;
+       
     }
-    .middle .bottom{
-        top: 80%;
-        width: 180px;
-        padding: 10px;
-        border: white 6px solid;
-        font-size: 40px;
-        display: block;
-        text-align: center;
-        background: none;
-    }
- }
- @media only screen and (min-width:622px){
+    .button p{
+        color: rgb(40, 74, 230);
+        text-shadow: rgb(107, 40, 230) 0 0 20px ;
+        font-size: 70px;
      
-    body{
-        background-image: url(Images/1\ \(1\).jpg);
-        background-size: 100% 100%;
-        
     }
-    .middle p{
-        font-size: 40px;
-        position: absolute;
-        top: 20%;
-        left: 50%;
-        transform: translate(-50%,-50%);
-        font-style: italic;
-        height: 50px;
-        width: 150px;
-
-    }
-    .middle .bottom{
-        top: 60%;
-        width: 100px;
-        padding: 5px;
-        border: white 6px solid;
-        font-size: 20px;
-        display: block;
-        text-align: center;
-        height: 30px;
-    
-    }
- }
+    .button a{
+        text-decoration:none;
+        color: rgb(40, 74, 230);
+    }  
+}
